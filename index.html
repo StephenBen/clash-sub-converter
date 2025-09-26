@@ -12,12 +12,12 @@
 <body>
   <h1>订阅 → Clash YAML</h1>
   <p>在下方粘贴你的订阅 URL（例如一个 http(s) 链接），点击“生成并下载”。</p>
-  <input id="sub" type="text" placeholder="https://clash-sub-converter.stephen-ben.workers.dev/" />
+  <input id="sub" type="text" placeholder="https://example.com/subscribe" />
   <br/>
   <button id="go">生成并下载 YAML</button>
 
   <script>
-    const workerBase = 'YOUR_WORKER_URL'; // 替换为你的 Worker 地址（不要带 ?url=）
+    const workerBase = 'https://clash-sub-converter.stephen-ben.workers.dev'; // 替换为你的 Worker 地址（不要带 ?url=）
     document.getElementById('go').onclick = () => {
       const url = document.getElementById('sub').value.trim();
       if (!url) return alert('请填写订阅 URL');
